@@ -7,6 +7,42 @@
 * Kubernetes local cluster
 * [Kustomize](https://kustomize.io/)
 
+## Overview
+
+Tree below show how the project looks like and how many environment there are:
+
+```
+.
+├── base
+│   ├── jobmanager-deployment.yaml
+│   ├── jobmanager-service.yaml
+│   ├── kustomization.yaml
+│   └── taskmanager-deployment.yaml
+└── overlays
+    ├── local
+    │   ├── flink-conf.yaml
+    │   ├── flinkconfig_patch.yaml
+    │   ├── healthcheck_patch.yaml
+    │   └── kustomization.yaml
+    ├── production
+    │   ├── cpulimit_patch.yaml
+    │   ├── flink-conf.yaml
+    │   ├── flinkconfig_patch.yaml
+    │   ├── healthcheck_patch.yaml
+    │   ├── kustomization.yaml
+    │   ├── log4j-console.properties
+    │   ├── memorylimit_patch.yaml
+    │   └── replicacount_patch.yaml
+    └── test
+        ├── cpulimit_patch.yaml
+        ├── flink-conf.yaml
+        ├── flinkconfig_patch.yaml
+        ├── healthcheck_patch.yaml
+        ├── kustomization.yaml
+        ├── memorylimit_patch.yaml
+        └── replicacount_patch.yaml
+```
+
 ## Usage
 
 First, select which overlay you want to apply: `local|test|production` and follow above instruction:
