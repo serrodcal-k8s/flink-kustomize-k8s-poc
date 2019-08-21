@@ -1,0 +1,10 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: flink-taskmanager
+spec:
+  replicas: 2
+  template:
+    spec:
+      containers:
+      - name: taskmanager

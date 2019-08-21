@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: flink-jobmanager
+spec:
+  template:
+    spec:
+      containers:
+      - name: jobmanager
+        resources:
+          limits:
+            memory: 3072Mi
+          requests:
+            memory: 2048Mi

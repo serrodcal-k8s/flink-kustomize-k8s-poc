@@ -1,0 +1,6 @@
+blob.server.port: 6124
+jobmanager.rpc.address: flink-jobmanager
+jobmanager.rpc.port: 6123
+jobmanager.heap.mb: 1024
+taskmanager.heap.mb: 1024
+taskmanager.numberOfTaskSlots: 1

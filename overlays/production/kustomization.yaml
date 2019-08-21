@@ -1,0 +1,13 @@
+bases:
+- ../../base
+patches:
+- healthcheck_patch.yaml
+- flinkconfig_patch.yaml
+- memorylimit_patch.yaml
+- cpulimit_patch.yaml
+- replicacount_patch.yaml
+configMapGenerator:
+- name: flink-config
+  files:
+  - flink-conf.yaml
+  - log4j-console.properties

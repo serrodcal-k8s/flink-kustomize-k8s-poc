@@ -1,0 +1,4 @@
+resources:
+- jobmanager-deployment.yaml
+- jobmanager-service.yaml
+- taskmanager-deployment.yaml

@@ -1,0 +1,9 @@
+bases:
+- ../../base
+patches:
+- healthcheck_patch.yaml
+- flinkconfig_patch.yaml
+configMapGenerator:
+- name: flink-config
+  files:
+  - flink-conf.yaml
